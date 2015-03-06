@@ -14,6 +14,8 @@ tab5rows <- read.table("./household_power_consumption.txt",
 classes <- sapply(tab5rows, class)
 classes
 
+# full file
+
 power <- read.table("./household_power_consumption.txt",
                     comment.char = "",
                     header = TRUE,
@@ -58,7 +60,7 @@ power_work$Sub_metering_3 <- as.numeric(as.character(power_work$Sub_metering_3))
 
 
 ### plot and expot to png:  first plot Sub_metering_1,
-# then overlay the other 2 with the legend
+    # then overlay with the other 2 and the legend
 
 plot(power_work$date_time, power_work$Sub_metering_1, 
      type = "l", 

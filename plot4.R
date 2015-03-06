@@ -14,6 +14,8 @@ tab5rows <- read.table("./household_power_consumption.txt",
 classes <- sapply(tab5rows, class)
 classes
 
+# full file
+
 power <- read.table("./household_power_consumption.txt",
                     comment.char = "",
                     header = TRUE,

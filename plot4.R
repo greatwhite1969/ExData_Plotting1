@@ -83,9 +83,11 @@ power_work$grap <- as.numeric(as.character(power_work$Global_reactive_power))
 
 # set matrix
 
-par(mfrow = c(2, 2))
+# four graphs and export to png
 
-# four graphs
+png(file = "plot4.png", width = 480, height = 480)
+
+par(mfrow = c(2, 2))
 
 with(power_work, {
      plot(power_work$date_time, power_work$gap, 
@@ -109,11 +111,8 @@ with(power_work, {
      legend("topright", 
             c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
             col = c("black", "red", "blue"), 
-            y.intersp = .25,
-            x.intersp = .5,
             lty = 1,
-            bty = "n",
-            cex = .5)
+            bty = "n")
      plot(power_work$date_time, power_work$grap, 
           type = "l", 
           xlab="datetime",
@@ -123,6 +122,6 @@ with(power_work, {
           cex.axis = .85) 
 })
 
-dev.copy(png, width = 480, height = 480, file = "plot4.png")
+# dev.copy(png, width = 480, height = 480, file = "plot4.png")
 
 dev.off()

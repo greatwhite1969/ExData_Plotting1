@@ -71,13 +71,15 @@ power_work$gap <- as.numeric(as.character(power_work$Global_active_power))
 
 ### plot and export to png
 
+png(file = "plot2.png", width = 480, height = 480)
+
 plot(power_work$date_time, power_work$gap, 
      type = "l", 
      xlab="",
      ylab = "Global Active Power (kilowatts)") 
 
 
-dev.copy(png, width = 480, height = 480, file = "plot2.png")
+# dev.copy(png, width = 480, height = 480, file = "plot2.png")
 
 dev.off()
 

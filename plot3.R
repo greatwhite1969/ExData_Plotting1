@@ -76,6 +76,8 @@ power_work$Sub_metering_3 <- as.numeric(as.character(power_work$Sub_metering_3))
 ### plot and expot to png:  first plot Sub_metering_1,
     # then overlay with the other 2 and the legend
 
+png(file = "plot3.png", width = 480, height = 480)
+
 plot(power_work$date_time, power_work$Sub_metering_1, 
      type = "l", 
      xlab="",
@@ -94,7 +96,7 @@ legend("topright",
        col = c("black", "red", "blue"), 
        lty = 1)
 
-dev.copy(png, width = 480, height = 480, file = "plot3.png")
+# dev.copy(png, width = 480, height = 480, file = "plot3.png")
 
 dev.off()
 

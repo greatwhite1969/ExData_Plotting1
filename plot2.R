@@ -1,3 +1,17 @@
+
+setwd()
+
+### description of data
+
+# https://archive.ics.uci.edu/ml/datasets/Individual+household+electric+power+consumption 
+
+
+### zip file with data for project
+
+# https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip
+
+
+
 ############################  READ THE DATA AND FORMAT DATES  ##################################
 
 
@@ -63,7 +77,7 @@ plot(power_work$date_time, power_work$gap,
      ylab = "Global Active Power (kilowatts)") 
 
 
-dev.copy(png, file = "plot2.png")
+dev.copy(png, width = 480, height = 480, file = "plot2.png")
 
 dev.off()
 

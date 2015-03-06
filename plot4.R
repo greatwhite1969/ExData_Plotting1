@@ -1,3 +1,17 @@
+
+setwd()
+
+### description of data
+
+# https://archive.ics.uci.edu/ml/datasets/Individual+household+electric+power+consumption 
+
+
+### zip file with data for project
+
+# https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip
+
+
+
 ############################  READ THE DATA AND FORMAT DATES  ##################################
 
 
@@ -109,6 +123,6 @@ with(power_work, {
           cex.axis = .85) 
 })
 
-dev.copy(png, file = "plot4.png")
+dev.copy(png, width = 480, height = 480, file = "plot4.png")
 
 dev.off()
